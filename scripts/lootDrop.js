@@ -1,4 +1,4 @@
-const moduleName= "lootDrop";
+const logName= "lootDrop";
 
 Hooks.on("combatStart", async (combat, updateData) => {
   log("combat", combat);
@@ -28,8 +28,8 @@ Hooks.on("updateCombat", async (combat, changed, options, userId) => {
   
   function log(message, data) {
     if (data) {
-      console.log(`${moduleName} | ${message}`, data)
+      console.log(`${logName} | ${message}`, data)
     } else {
-      console.log(`${moduleName} | ${message}`)
+      console.log(`${logName} | ${message}`)
     }
   }
