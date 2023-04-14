@@ -1,32 +1,35 @@
 const logName= "lootDrop";
 
 Hooks.on("combatStart", async (combat, updateData) => {
-  log("combat", combat);
+  lootLog("combat", combat);
 });
 
 Hooks.on("updateCombat", async (combat, changed, options, userId) => {
-  log("we get signal")  
-  if (combat.data.scene === game.scenes.active.id) {
+  lootLog("we get signal", combat.scene)
+  lootLog("changed: ", changed)
+  lootLog("options: ", options)
+  lootLog("userId: ", userId)  
+  if (combat.scene === game.scenes.active.id) {
       const combatants = combat.combatants;
-      log("mans:", combatants)
       const allHostileDefeated = combatants.every((combatant) => {
         const actor = combatant.actor;
-        if (actor && actor.data.type === "npc" && actor.data.data.attributes.hp.value > 0) {
+        lootLog("mans: ", actor)
+        if (actor && actor.type === "npc" && actor.system.attributes.hp.value > 0) {
           return false;
         }
         return true;
       });
       if (allHostileDefeated) {
         combatants.every((combatant) => {
-          log(`combat ended`)
+          lootLog(`combat ended`)
           let token = canvas.token.get(combatant.tokenId)
-          log("token: ", token)
+          lootLog("token: ", token)
         })
       }
     }
   });
   
-  function log(message, data) {
+  function lootLog(message, data) {
     if (data) {
       console.log(`${logName} | ${message}`, data)
     } else {
