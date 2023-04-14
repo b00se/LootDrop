@@ -12,8 +12,9 @@ Hooks.on("updateCombat", async (combat, changed, options, userId) => {
       });
       if (allHostileDefeated) {
         combatants.every((combatant) => {
+          console.log(`FOOBAR combat ended`)
           let token = canvas.token.get(combatant.tokenId)
-          console.log(token)
+          console.log(`FOOBAR $token`)
         })
       }
     }
