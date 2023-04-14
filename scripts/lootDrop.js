@@ -1,6 +1,6 @@
 const moduleName= "lootDrop";
 
-Hooks.on("updateCombat", async (combat, updateData) => {
+Hooks.on("combatStart", async (combat, updateData) => {
   log("combat", combat);
 });
 
