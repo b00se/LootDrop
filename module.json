@@ -1,0 +1,35 @@
+{
+    "name": "lootDrop",
+    "title": "Loot Drop",
+    "description": "Automatically generates item piles for defeated NPCs, making it easier for GMs to distribute loot to players.",
+    "author": "b00se",
+    "version": "1.0.0",
+    "minimumCoreVersion": "10.0.0",
+    "compatibleCoreVersion": "10.0.0",
+    "url": "https://github.com/b00se/LootDrop",
+    "manifest": "https://raw.githubusercontent.com/b00se/LootDrop/master/module.json",
+    "download": "https://github.com/b00se/LootDrop/archive/master.zip",
+    "license": "MIT",
+    "bugs": "https://github.com/b00se/LootDrop/issues",
+    "readme": "https://github.com/b00se/LootDrop/blob/master/README.md",
+    "changelog": "https://github.com/b00se/LootDrop/blob/master/CHANGELOG.md",
+    "styles": [],
+    "scripts": [
+      "scripts/lootDrop.js"
+    ],
+    "languages": [],
+    "esmodules": [],
+    "packs": [],
+    "tags": [
+      "loot",
+      "item piles",
+      "utility"
+    ],
+    "dependencies": [
+      {
+        "name": "item-piles",
+        "manifest": "https://raw.githubusercontent.com/fvtt-0/ItemPiles/master/module.json"
+      }
+    ]
+  }
+  

@@ -1,0 +1,12 @@
+{
+  "name": "lootdrop",
+  "version": "1.0.0",
+  "description": "LootDrop is a FoundryVTT module that automatically generates loot piles for defeated NPCs. Simply add items to the NPC's inventory, and when the NPC is defeated, LootDrop will create a pile of items that the players can then loot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
