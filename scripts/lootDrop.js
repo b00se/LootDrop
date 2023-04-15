@@ -12,7 +12,7 @@ Hooks.on("deleteCombat", async (combat, options, userId) => {
     combatants = combat.combatants
     combatants.contents.every(async (combatant) => {
       lootLog("got combatant", combatant)
-      if (combatant.isNpc && combatant.defeated) {
+      if (combatant.isNPC && combatant.defeated) {
         let actor = game.actors.get(combatant.actorId)
         let token = canvas.tokens.get(combatant.tokenId)
         // populate loot
