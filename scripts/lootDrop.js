@@ -10,7 +10,7 @@ Hooks.on("deleteCombat", async (combat, options, userId) => {
   lootLog("deleting combat", combat)
   if (combatId !== null && combatId === combat.id) {
     combatants = combat.combatants
-    combatants.every(async (combatant) => {
+    combatants.contents.every(async (combatant) => {
       if (combatant && combatant.isNpc && combatant.resource <= 0) {
         lootLog("got combatant", combatant)
         let actor = game.actors.get(combatant.value.actorId)
