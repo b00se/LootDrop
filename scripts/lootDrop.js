@@ -6,7 +6,7 @@ Hooks.on("combatStart", async (combat, updateData) => {
   combatId = combat.id
 });
 
-Hooks.on("combatDelete", async (combat, options, userId) => {
+Hooks.on("deleteCombat", async (combat, options, userId) => {
   lootLog("deleting combat", combat)
   if (combatId !== null && combatId === combat.id) {
     combatants = combat.combatants
@@ -28,6 +28,9 @@ Hooks.on("combatDelete", async (combat, options, userId) => {
     })
   }
 })
+
+// cc3HIOnfmxXLkxmh
+// cc3HIOnfmxXLkxmh
 
 // Hooks.on("updateCombat", async (combat, changed, options, userId) => {
 //   lootLog("we get signal", combat.scene)
