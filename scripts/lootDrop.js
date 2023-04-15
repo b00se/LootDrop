@@ -8,7 +8,9 @@ Hooks.on("updateCombat", async (combat, changed, options, userId) => {
   lootLog("we get signal", combat.scene)
   lootLog("changed: ", changed)
   lootLog("options: ", options)
-  lootLog("userId: ", userId)  
+  lootLog("userId: ", userId)
+  lootLog("combat.scene", combat.scene)
+  lootLog("active sceneId", game.scenes.active.id)
   if (combat.scene === game.scenes.active.id) {
       const combatants = combat.combatants;
       const allHostileDefeated = combatants.every((combatant) => {
