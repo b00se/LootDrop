@@ -29,6 +29,10 @@ Hooks.on("deleteCombat", async (combat, options, userId) => {
   }
 })
 
+Hooks.on("preDeleteCombatant", async (combatant, options, userId) => {
+  lootLog("about to delete combatant", combatant)
+})
+
 // cc3HIOnfmxXLkxmh
 // cc3HIOnfmxXLkxmh
 
