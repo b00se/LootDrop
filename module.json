@@ -3,7 +3,7 @@
     "title": "Loot Drop",
     "description": "Automatically generates item piles for defeated NPCs, making it easier for GMs to distribute loot to players.",
     "author": "b00se",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "minimumCoreVersion": "10.0.0",
     "compatibleCoreVersion": "10.0.0",
     "url": "https://github.com/b00se/LootDrop",
