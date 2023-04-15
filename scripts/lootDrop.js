@@ -14,6 +14,7 @@ Hooks.on("deleteCombat", async (combat, options, userId) => {
       lootLog("got combatant", combatant)
       if (combatant.isNPC && combatant.defeated) {
         let token = canvas.tokens.get(combatant.tokenId)
+        lootLog("token actor", token.actor)
         // populate loot
         console.log("Rolling loot")
         await game.itempiles.API.rollItemTable("Merchant: General", {
