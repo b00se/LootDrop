@@ -11,8 +11,8 @@ Hooks.on("deleteCombat", async (combat, options, userId) => {
   if (combatId !== null && combatId === combat.id) {
     combatants = combat.combatants
     combatants.contents.every(async (combatant) => {
+      lootLog("got combatant", combatant)
       if (combatant && combatant.isNpc && combatant.resource <= 0) {
-        lootLog("got combatant", combatant)
         let actor = game.actors.get(combatant.actorId)
         let token = canvas.tokens.get(combatant.tokenId)
         // populate loot
@@ -29,7 +29,7 @@ Hooks.on("deleteCombat", async (combat, options, userId) => {
   }
 })
 
-Hooks.on("preDeleteCombatant", async (combatant, options, userId) => {
+Hooks.on("deleteCombatant", async (combatant, options, userId) => {
   lootLog("about to delete combatant", combatant)
 })
 
